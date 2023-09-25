@@ -225,20 +225,30 @@ $lineWidth: 3px;
 
 .organization {
   font-size: 1rem;
+
   ul {
     @include liReset;
     display: flex;
     justify-content: center;
     position: relative;
+    @include screen('mobile') {
+      display: block;
+    }
     li {
       position: relative;
       padding-top: 30px;
+      @include screen('mobile') {
+        padding-top: 0;
+      }
       &:before,
       &:after {
         box-sizing: border-box;
       }
       &.inner {
         margin-top: -30px;
+        @include screen('mobile') {
+          margin-top: 0;
+        }
       }
     }
     a {
@@ -256,6 +266,9 @@ $lineWidth: 3px;
       &:hover {
         filter: brightness(95%);
       }
+      @include screen('mobile') {
+        margin-bottom: 15px;
+      }
     }
   }
   .administration,
@@ -265,6 +278,10 @@ $lineWidth: 3px;
         width: 30%;
         margin: 0 auto 30px;
         background-color: mix($colorPrimary, #fff, 55%);
+        @include screen('mobile') {
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
     }
   }
@@ -281,6 +298,9 @@ $lineWidth: 3px;
           width: $lineWidth;
           height: 30px;
           background-color: $colorLine;
+          @include screen('mobile') {
+            left: 15px;
+          }
         }
       }
     }
@@ -288,8 +308,33 @@ $lineWidth: 3px;
 
   //主任秘書
   .director {
+    @include screen('mobile') {
+      ul {
+        padding-left: 30px;
+        li {
+          a {
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 75%;
+              left: -20px;
+              width: 20px;
+              height: 150%;
+              border-left: $lineWidth solid $colorLine;
+              border-bottom: $lineWidth solid $colorLine;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+    }
+
     > li {
       margin-top: -30px;
+      @include screen('mobile') {
+        margin-top: 0;
+      }
       > a {
         position: relative;
         &:before {
@@ -300,6 +345,9 @@ $lineWidth: 3px;
           width: 3px;
           height: 30px;
           background-color: $colorLine;
+          @include screen('mobile') {
+            content: none;
+          }
         }
       }
     }
@@ -309,6 +357,7 @@ $lineWidth: 3px;
   .subdirector {
     flex-wrap: wrap;
     justify-content: flex-start;
+
     &:before {
       content: '';
       position: absolute;
@@ -317,6 +366,9 @@ $lineWidth: 3px;
       width: 3px;
       height: 100%;
       background-color: $colorLine;
+      @include screen('mobile') {
+        content: none;
+      }
     }
     > li {
       flex-shrink: 1;
@@ -326,38 +378,66 @@ $lineWidth: 3px;
         position: absolute;
         top: 0;
         height: 30px;
-        border-top: 3px solid $colorLine;
-      }
-      &:nth-of-type(4n + 1) {
-        &:before {
-          width: calc(150% + 30px);
-          left: 50%;
-          border-left: 3px dotted $colorLine;
+        border-top: $lineWidth solid $colorLine;
+        @include screen('mobile') {
+          content: none;
         }
       }
-      &:nth-of-type(4n + 2) {
-        margin-right: 30px;
-        &:before {
-          left: 50%;
-          width: calc(50% + 30px);
-          border-left: 3px dotted $colorLine;
+      @include screen('mobile') {
+        > a {
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -15px;
+            width: 15px;
+            height: 50%;
+            border-bottom: $lineWidth dotted $colorLine;
+          }
         }
       }
-      &:nth-of-type(4n + 3) {
-        margin-left: 30px;
-        &:before {
-          right: 50%;
-          width: calc(50% + 30px);
-          border-right: 3px dotted $colorLine;
+
+      @media screen and (min-width: 768px) {
+        &:nth-of-type(4n + 1) {
+          &:before {
+            width: calc(150% + 30px);
+            left: 50%;
+            border-left: 3px dotted $colorLine;
+          }
+        }
+        &:nth-of-type(4n + 2) {
+          margin-right: 30px;
+          @include screen('mobile') {
+            margin-right: 0;
+          }
+
+          &:before {
+            left: 50%;
+            width: calc(50% + 30px);
+            border-left: 3px dotted $colorLine;
+          }
+        }
+        &:nth-of-type(4n + 3) {
+          margin-left: 30px;
+          @include screen('mobile') {
+            margin-left: 0;
+          }
+          &:before {
+            right: 50%;
+            width: calc(50% + 30px);
+            border-right: 3px dotted $colorLine;
+          }
+        }
+        &:nth-of-type(4n) {
+          &:before {
+            width: 100%;
+            right: 50%;
+            border-right: 3px dotted $colorLine;
+          }
         }
       }
-      &:nth-of-type(4n) {
-        &:before {
-          width: 100%;
-          right: 50%;
-          border-right: 3px dotted $colorLine;
-        }
-      }
+
       a {
         background-color: mix($colorLight, #fff, 80%);
       }
@@ -387,6 +467,9 @@ $lineWidth: 3px;
       width: 90%;
       height: 3px;
       background-color: $colorLine;
+      @include screen('mobile') {
+        content: none;
+      }
     }
     > li {
       flex: 1 1 10%;
@@ -398,20 +481,28 @@ $lineWidth: 3px;
         height: 30px;
         width: calc(50% + 5px);
         border-left: 3px solid $colorLine;
-      }
-      &:last-of-type {
-        &:before {
-          right: 50%;
-          left: auto;
-          transform: scaleX(-1);
+        @include screen('mobile') {
+          content: '';
+          > a {
+          }
         }
       }
-      &:first-of-type,
-      &:last-of-type {
-        &:before {
-          border-top: $lineWidth solid $colorLine;
+      @media screen and (min-width: 768px) {
+        &:last-of-type {
+          &:before {
+            right: 50%;
+            left: auto;
+            transform: scaleX(-1);
+          }
+        }
+        &:first-of-type,
+        &:last-of-type {
+          &:before {
+            border-top: $lineWidth solid $colorLine;
+          }
         }
       }
+
       > a {
         background-color: mix($colorBlue, #fff, 55%);
       }

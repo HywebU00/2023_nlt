@@ -9633,15 +9633,30 @@
     justify-content: center;
     position: relative;
   }
+  @media screen and (max-width: 767px) {
+    .organization ul {
+      display: block;
+    }
+  }
   .organization ul li {
     position: relative;
     padding-top: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    .organization ul li {
+      padding-top: 0;
+    }
   }
   .organization ul li:before, .organization ul li:after {
     box-sizing: border-box;
   }
   .organization ul li.inner {
     margin-top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .organization ul li.inner {
+      margin-top: 0;
+    }
   }
   .organization ul a {
     display: flex;
@@ -9659,11 +9674,23 @@
   .organization ul a:hover {
     filter: brightness(95%);
   }
+  @media screen and (max-width: 767px) {
+    .organization ul a {
+      margin-bottom: 15px;
+    }
+  }
   .organization .administration > li > a,
   .organization .director > li > a {
     width: 30%;
     margin: 0 auto 30px;
     background-color: #74babd;
+  }
+  @media screen and (max-width: 767px) {
+    .organization .administration > li > a,
+    .organization .director > li > a {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
   .organization .administration > li > a {
     position: relative;
@@ -9677,8 +9704,37 @@
     height: 30px;
     background-color: #8ec6c9;
   }
+  @media screen and (max-width: 767px) {
+    .organization .administration > li > a:before {
+      left: 15px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .organization .director ul {
+      padding-left: 30px;
+    }
+    .organization .director ul li a {
+      position: relative;
+    }
+    .organization .director ul li a:before {
+      content: "";
+      position: absolute;
+      bottom: 75%;
+      left: -20px;
+      width: 20px;
+      height: 150%;
+      border-left: 3px solid #8ec6c9;
+      border-bottom: 3px solid #8ec6c9;
+      box-sizing: border-box;
+    }
+  }
   .organization .director > li {
     margin-top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .organization .director > li {
+      margin-top: 0;
+    }
   }
   .organization .director > li > a {
     position: relative;
@@ -9691,6 +9747,11 @@
     width: 3px;
     height: 30px;
     background-color: #8ec6c9;
+  }
+  @media screen and (max-width: 767px) {
+    .organization .director > li > a:before {
+      content: none;
+    }
   }
   .organization .subdirector {
     flex-wrap: wrap;
@@ -9705,6 +9766,11 @@
     height: 100%;
     background-color: #8ec6c9;
   }
+  @media screen and (max-width: 767px) {
+    .organization .subdirector:before {
+      content: none;
+    }
+  }
   .organization .subdirector > li {
     flex-shrink: 1;
     flex-basis: calc(25% - 15px);
@@ -9716,31 +9782,66 @@
     height: 30px;
     border-top: 3px solid #8ec6c9;
   }
-  .organization .subdirector > li:nth-of-type(4n + 1):before {
-    width: calc(150% + 30px);
-    left: 50%;
-    border-left: 3px dotted #8ec6c9;
+  @media screen and (max-width: 767px) {
+    .organization .subdirector > li:before {
+      content: none;
+    }
   }
-  .organization .subdirector > li:nth-of-type(4n + 2) {
-    margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    .organization .subdirector > li > a {
+      position: relative;
+    }
+    .organization .subdirector > li > a:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 15px;
+      height: 50%;
+      border-bottom: 3px dotted #8ec6c9;
+    }
   }
-  .organization .subdirector > li:nth-of-type(4n + 2):before {
-    left: 50%;
-    width: calc(50% + 30px);
-    border-left: 3px dotted #8ec6c9;
+  @media screen and (min-width: 768px) {
+    .organization .subdirector > li:nth-of-type(4n + 1):before {
+      width: calc(150% + 30px);
+      left: 50%;
+      border-left: 3px dotted #8ec6c9;
+    }
+    .organization .subdirector > li:nth-of-type(4n + 2) {
+      margin-right: 30px;
+    }
   }
-  .organization .subdirector > li:nth-of-type(4n + 3) {
-    margin-left: 30px;
+  @media screen and (min-width: 768px) and (max-width: 767px) {
+    .organization .subdirector > li:nth-of-type(4n + 2) {
+      margin-right: 0;
+    }
   }
-  .organization .subdirector > li:nth-of-type(4n + 3):before {
-    right: 50%;
-    width: calc(50% + 30px);
-    border-right: 3px dotted #8ec6c9;
+  @media screen and (min-width: 768px) {
+    .organization .subdirector > li:nth-of-type(4n + 2):before {
+      left: 50%;
+      width: calc(50% + 30px);
+      border-left: 3px dotted #8ec6c9;
+    }
+    .organization .subdirector > li:nth-of-type(4n + 3) {
+      margin-left: 30px;
+    }
   }
-  .organization .subdirector > li:nth-of-type(4n):before {
-    width: 100%;
-    right: 50%;
-    border-right: 3px dotted #8ec6c9;
+  @media screen and (min-width: 768px) and (max-width: 767px) {
+    .organization .subdirector > li:nth-of-type(4n + 3) {
+      margin-left: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .organization .subdirector > li:nth-of-type(4n + 3):before {
+      right: 50%;
+      width: calc(50% + 30px);
+      border-right: 3px dotted #8ec6c9;
+    }
+    .organization .subdirector > li:nth-of-type(4n):before {
+      width: 100%;
+      right: 50%;
+      border-right: 3px dotted #8ec6c9;
+    }
   }
   .organization .subdirector > li a {
     background-color: #ffbd59;
@@ -9770,6 +9871,11 @@
     height: 3px;
     background-color: #8ec6c9;
   }
+  @media screen and (max-width: 767px) {
+    .organization .department:before {
+      content: none;
+    }
+  }
   .organization .department > li {
     flex: 1 1 10%;
   }
@@ -9782,13 +9888,20 @@
     width: calc(50% + 5px);
     border-left: 3px solid #8ec6c9;
   }
-  .organization .department > li:last-of-type:before {
-    right: 50%;
-    left: auto;
-    transform: scaleX(-1);
+  @media screen and (max-width: 767px) {
+    .organization .department > li:before {
+      content: "";
+    }
   }
-  .organization .department > li:first-of-type:before, .organization .department > li:last-of-type:before {
-    border-top: 3px solid #8ec6c9;
+  @media screen and (min-width: 768px) {
+    .organization .department > li:last-of-type:before {
+      right: 50%;
+      left: auto;
+      transform: scaleX(-1);
+    }
+    .organization .department > li:first-of-type:before, .organization .department > li:last-of-type:before {
+      border-top: 3px solid #8ec6c9;
+    }
   }
   .organization .department > li > a {
     background-color: #73abe3;
