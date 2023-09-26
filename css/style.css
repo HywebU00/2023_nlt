@@ -9933,7 +9933,6 @@
     width: 15px;
     height: calc(100% + 10px);
     border-left: 3px solid #8ec6c9;
-    border-bottom: 3px dotted #8ec6c9;
   }
   .orgChart .section > li:first-of-type:before {
     height: calc(100% + 30px);
@@ -9946,7 +9945,8 @@
     }
   }
   .orgChart .section > li:last-of-type:before {
-    height: calc(50% + 10px);
+    height: calc(50% + 30px);
+    top: -30px;
   }
   @media screen and (max-width: 767px) {
     .orgChart .section > li:last-of-type:before {
@@ -9959,6 +9959,16 @@
     margin-bottom: 0;
     background-color: #b3d1f0;
     font-size: 0.938em;
+    position: relative;
+  }
+  .orgChart .section > li > a:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 50%;
+    top: -3px;
+    left: -15px;
+    border-bottom: 3px dotted #8ec6c9 !important;
   }
 }
 .colorA a:hover {

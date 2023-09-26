@@ -569,7 +569,6 @@ $lineWidth: 3px;
         width: 15px;
         height: calc(100% + 10px);
         border-left: $lineWidth solid $colorLine;
-        border-bottom: $lineWidth dotted $colorLine;
       }
       &:first-of-type {
         &:before {
@@ -583,7 +582,8 @@ $lineWidth: 3px;
       }
       &:last-of-type {
         &:before {
-          height: calc(50% + 10px);
+          height: calc(50% + 30px);
+          top: -30px;
           @include screen('mobile') {
             height: calc(100% + 15px);
             top: -15px;
@@ -595,6 +595,16 @@ $lineWidth: 3px;
         margin-bottom: 0;
         background-color: mix($colorBlue, #fff, 30%);
         font-size: 0.938em;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 15px;
+          height: 50%;
+          top: -3px;
+          left: -15px;
+          border-bottom: $lineWidth dotted $colorLine !important;
+        }
       }
     }
   }
