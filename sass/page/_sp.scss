@@ -224,6 +224,7 @@
 $lineWidth: 3px;
 
 .organization {
+  overflow: hidden;
   font-size: 1rem;
 
   ul {
@@ -316,12 +317,17 @@ $lineWidth: 3px;
             content: '';
             position: absolute;
             left: -15px;
-            bottom: 0;
+            top: -15px;
             width: 3px;
             height: calc(100% + 15px);
             background-color: #8ec6c9;
           }
-
+          &:last-of-type {
+            &:before {
+              content: '';
+              height: calc(50% + 15px);
+            }
+          }
           a {
             position: relative;
             &:before {
@@ -387,67 +393,72 @@ $lineWidth: 3px;
         content: '';
         position: absolute;
         top: 0;
-        height: 30px;
-        border-top: $lineWidth solid $colorLine;
-        @include screen('mobile') {
-          content: none;
-        }
+        left: 0;
+        height: $lineWidth;
+        width: 100%;
+        background-color: $colorLine;
       }
-      @include screen('mobile') {
-        > a {
-          position: relative;
-          &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -15px;
-            width: 15px;
-            height: 50%;
-            border-bottom: $lineWidth dotted $colorLine;
-          }
-        }
-      }
-
       @media screen and (min-width: 768px) {
         &:nth-of-type(4n + 1) {
           &:before {
-            width: calc(150% + 30px);
+            width: 50%;
             left: 50%;
-            border-left: 3px dotted $colorLine;
+          }
+          &:last-of-type {
+            &:before {
+              width: calc(150% + 30px);
+            }
           }
         }
         &:nth-of-type(4n + 2) {
           margin-right: 30px;
-          @include screen('mobile') {
-            margin-right: 0;
-          }
-
           &:before {
-            left: 50%;
-            width: calc(50% + 30px);
-            border-left: 3px dotted $colorLine;
+            width: calc(100% + 30px);
           }
         }
         &:nth-of-type(4n + 3) {
           margin-left: 30px;
-          @include screen('mobile') {
-            margin-left: 0;
-          }
           &:before {
-            right: 50%;
-            width: calc(50% + 30px);
-            border-right: 3px dotted $colorLine;
+            width: calc(100% + 30px);
+            left: -30px;
+          }
+          &:last-of-type {
+            &:before {
+              width: calc(50% + 30px);
+            }
           }
         }
         &:nth-of-type(4n) {
           &:before {
-            width: 100%;
-            right: 50%;
-            border-right: 3px dotted $colorLine;
+            width: 50%;
+          }
+        }
+      }
+      @include screen('mobile') {
+        &:last-of-type {
+          &:before {
+            height: calc(100% + 15px) !important;
           }
         }
       }
 
+      > a {
+        position: relative;
+        //垂直連接線
+        &:before {
+          content: '';
+          position: absolute;
+          top: -30px;
+          left: 0;
+          width: 50%;
+          height: 30px;
+          border-right: $lineWidth dotted $colorLine;
+          @include screen('mobile') {
+            border-right: none;
+            border-bottom: $lineWidth dotted $colorLine !important;
+          }
+        }
+      }
       a {
         background-color: mix($colorLight, #fff, 80%);
       }
@@ -482,7 +493,6 @@ $lineWidth: 3px;
     // }
     > li {
       flex: 1 1 10%;
-
       &:before {
         content: '';
         position: absolute;
@@ -537,6 +547,7 @@ $lineWidth: 3px;
           @include screen('mobile') {
             &:before {
               border-bottom-style: dotted;
+              border-left: 0;
             }
           }
         }
@@ -545,6 +556,10 @@ $lineWidth: 3px;
   }
   .section {
     flex-direction: column;
+    &:last-of-type {
+      float: left;
+      width: 100%;
+    }
     > li {
       padding: 0 0 0 25px;
       position: relative;
@@ -567,7 +582,7 @@ $lineWidth: 3px;
           height: calc(50% + 30px);
           top: -30px;
           @include screen('mobile') {
-            height: 50%;
+            height: calc(100% + 15px);
             top: -15px;
           }
         }

@@ -9623,6 +9623,7 @@
     max-width: 98%;
   }
   .organization {
+    overflow: hidden;
     font-size: 1rem;
   }
   .organization ul {
@@ -9717,10 +9718,14 @@
       content: "";
       position: absolute;
       left: -15px;
-      bottom: 0;
+      top: -15px;
       width: 3px;
       height: calc(100% + 15px);
       background-color: #8ec6c9;
+    }
+    .organization .director ul li:last-of-type:before {
+      content: "";
+      height: calc(50% + 15px);
     }
     .organization .director ul li a {
       position: relative;
@@ -9787,68 +9792,60 @@
     content: "";
     position: absolute;
     top: 0;
-    height: 30px;
-    border-top: 3px solid #8ec6c9;
-  }
-  @media screen and (max-width: 767px) {
-    .organization .subdirector > li:before {
-      content: none;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .organization .subdirector > li > a {
-      position: relative;
-    }
-    .organization .subdirector > li > a:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -15px;
-      width: 15px;
-      height: 50%;
-      border-bottom: 3px dotted #8ec6c9;
-    }
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #8ec6c9;
   }
   @media screen and (min-width: 768px) {
     .organization .subdirector > li:nth-of-type(4n + 1):before {
-      width: calc(150% + 30px);
+      width: 50%;
       left: 50%;
-      border-left: 3px dotted #8ec6c9;
+    }
+    .organization .subdirector > li:nth-of-type(4n + 1):last-of-type:before {
+      width: calc(150% + 30px);
     }
     .organization .subdirector > li:nth-of-type(4n + 2) {
       margin-right: 30px;
     }
-  }
-  @media screen and (min-width: 768px) and (max-width: 767px) {
-    .organization .subdirector > li:nth-of-type(4n + 2) {
-      margin-right: 0;
-    }
-  }
-  @media screen and (min-width: 768px) {
     .organization .subdirector > li:nth-of-type(4n + 2):before {
-      left: 50%;
-      width: calc(50% + 30px);
-      border-left: 3px dotted #8ec6c9;
+      width: calc(100% + 30px);
     }
     .organization .subdirector > li:nth-of-type(4n + 3) {
       margin-left: 30px;
     }
-  }
-  @media screen and (min-width: 768px) and (max-width: 767px) {
-    .organization .subdirector > li:nth-of-type(4n + 3) {
-      margin-left: 0;
-    }
-  }
-  @media screen and (min-width: 768px) {
     .organization .subdirector > li:nth-of-type(4n + 3):before {
-      right: 50%;
+      width: calc(100% + 30px);
+      left: -30px;
+    }
+    .organization .subdirector > li:nth-of-type(4n + 3):last-of-type:before {
       width: calc(50% + 30px);
-      border-right: 3px dotted #8ec6c9;
     }
     .organization .subdirector > li:nth-of-type(4n):before {
-      width: 100%;
-      right: 50%;
-      border-right: 3px dotted #8ec6c9;
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .organization .subdirector > li:last-of-type:before {
+      height: calc(100% + 15px) !important;
+    }
+  }
+  .organization .subdirector > li > a {
+    position: relative;
+  }
+  .organization .subdirector > li > a:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 50%;
+    height: 30px;
+    border-right: 3px dotted #8ec6c9;
+  }
+  @media screen and (max-width: 767px) {
+    .organization .subdirector > li > a:before {
+      border-right: none;
+      border-bottom: 3px dotted #8ec6c9 !important;
     }
   }
   .organization .subdirector > li a {
@@ -9914,10 +9911,15 @@
   @media screen and (max-width: 767px) {
     .organization .department li.mission a:before {
       border-bottom-style: dotted;
+      border-left: 0;
     }
   }
   .organization .section {
     flex-direction: column;
+  }
+  .organization .section:last-of-type {
+    float: left;
+    width: 100%;
   }
   .organization .section > li {
     padding: 0 0 0 25px;
@@ -9945,7 +9947,7 @@
   }
   @media screen and (max-width: 767px) {
     .organization .section > li:first-of-type:before {
-      height: 50%;
+      height: calc(100% + 15px);
       top: -15px;
     }
   }
