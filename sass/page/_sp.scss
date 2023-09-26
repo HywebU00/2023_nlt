@@ -312,16 +312,26 @@ $lineWidth: 3px;
       ul {
         padding-left: 30px;
         li {
+          &:before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            bottom: 0;
+            width: 3px;
+            height: calc(100% + 15px);
+            background-color: #8ec6c9;
+          }
+
           a {
             position: relative;
             &:before {
               content: '';
               position: absolute;
-              bottom: 75%;
+              top: calc(-50% - 30px);
               left: -20px;
               width: 20px;
-              height: 150%;
-              border-left: $lineWidth solid $colorLine;
+              height: calc(100% + 30px);
+              //border-left: $lineWidth solid $colorLine;
               border-bottom: $lineWidth solid $colorLine;
               box-sizing: border-box;
             }
@@ -457,49 +467,56 @@ $lineWidth: 3px;
   }
 
   .department {
-    clear: both;
     position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 5%;
-      width: 90%;
-      height: 3px;
-      background-color: $colorLine;
-      @include screen('mobile') {
-        content: none;
-      }
-    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 10%;
+    //   width: 80%;
+    //   height: 3px;
+    //   background-color: $colorLine;
+    //   @include screen('mobile') {
+    //     content: none;
+    //   }
+    // }
     > li {
       flex: 1 1 10%;
+
       &:before {
         content: '';
         position: absolute;
         top: 0;
-        left: 50%;
-        height: 30px;
-        width: calc(50% + 5px);
-        border-left: 3px solid $colorLine;
-        @include screen('mobile') {
-          content: '';
-          > a {
-          }
-        }
+        left: 0;
+        width: 100%;
+        height: $lineWidth;
+        background-color: $colorLine;
       }
       @media screen and (min-width: 768px) {
-        &:last-of-type {
-          &:before {
-            right: 50%;
-            left: auto;
-            transform: scaleX(-1);
-          }
-        }
         &:first-of-type,
         &:last-of-type {
           &:before {
-            border-top: $lineWidth solid $colorLine;
+            width: 50%;
           }
+        }
+        &:first-of-type {
+          &::before {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+      > a {
+        position: relative;
+        //節點連接線
+        &:before {
+          content: '';
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          height: 30px;
+          width: 50%;
+          border-left: 3px solid $colorLine;
         }
       }
 
@@ -509,12 +526,19 @@ $lineWidth: 3px;
     }
     li {
       &.mission {
-        &:before {
-          background-color: transparent;
-          border-left: 3px dotted $colorLine;
+        > a {
+          &:before {
+            border-left: 3px dotted $colorLine;
+          }
         }
+
         a {
           background-color: mix($colorBlue, #fff, 30%);
+          @include screen('mobile') {
+            &:before {
+              border-bottom-style: dotted;
+            }
+          }
         }
       }
     }
@@ -525,6 +549,9 @@ $lineWidth: 3px;
       padding: 0 0 0 25px;
       position: relative;
       margin-bottom: 10px;
+      @include screen('mobile') {
+        padding: 0;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -539,6 +566,10 @@ $lineWidth: 3px;
         &:before {
           height: calc(50% + 30px);
           top: -30px;
+          @include screen('mobile') {
+            height: 50%;
+            top: -15px;
+          }
         }
       }
       > a {
