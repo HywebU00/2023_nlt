@@ -7479,6 +7479,12 @@
     background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 80px, rgba(227, 243, 132, 0) 150px);
     margin-top: 106px;
   }
+  @media screen and (max-width: 767px) {
+    .innerPage {
+      padding-top: 0;
+      margin-bottom: 2em;
+    }
+  }
   .innerPage::before {
     content: "";
     position: absolute;

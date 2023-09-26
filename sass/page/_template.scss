@@ -57,6 +57,10 @@ body {
   position: relative;
   background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.5) 80px, rgba(227, 243, 132, 0) 150px);
   margin-top: 106px;
+  @include screen('mobile') {
+    padding-top: 0;
+    margin-bottom: 2em;
+  }
   &::before {
     content: '';
     position: absolute;
