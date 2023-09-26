@@ -223,10 +223,9 @@
 
 $lineWidth: 3px;
 
-.organization {
-  overflow: hidden;
+.orgChart {
   font-size: 1rem;
-
+  overflow: hidden;
   ul {
     @include liReset;
     display: flex;
@@ -245,18 +244,12 @@ $lineWidth: 3px;
       &:after {
         box-sizing: border-box;
       }
-      &.inner {
-        margin-top: -30px;
-        @include screen('mobile') {
-          margin-top: 0;
-        }
-      }
     }
     a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.5em 0.3em;
+      padding: 0.5em;
       min-height: 60px;
       background-color: $colorLightGray;
       margin: 0 5px 30px;
@@ -337,7 +330,6 @@ $lineWidth: 3px;
               left: -20px;
               width: 20px;
               height: calc(100% + 30px);
-              //border-left: $lineWidth solid $colorLine;
               border-bottom: $lineWidth solid $colorLine;
               box-sizing: border-box;
             }
@@ -463,15 +455,17 @@ $lineWidth: 3px;
         background-color: mix($colorLight, #fff, 80%);
       }
       .inner {
-        width: 100%;
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: calc(50% - 1px);
-          width: 1px;
-          height: 30px;
-          border-left: 3px dotted $colorLine;
+        margin-top: -30px;
+        @include screen('mobile') {
+          margin-top: 0;
+        }
+        > li {
+          flex-grow: 1;
+          > a {
+            &:before {
+              border-bottom-style: dotted;
+            }
+          }
         }
       }
     }
@@ -571,7 +565,7 @@ $lineWidth: 3px;
         content: '';
         position: absolute;
         left: 10px;
-        top: calc(-50% - 10px);
+        top: -10px;
         width: 15px;
         height: calc(100% + 10px);
         border-left: $lineWidth solid $colorLine;
@@ -579,8 +573,17 @@ $lineWidth: 3px;
       }
       &:first-of-type {
         &:before {
-          height: calc(50% + 30px);
+          height: calc(100% + 30px);
           top: -30px;
+          @include screen('mobile') {
+            height: calc(100% + 15px);
+            top: -15px;
+          }
+        }
+      }
+      &:last-of-type {
+        &:before {
+          height: calc(50% + 10px);
           @include screen('mobile') {
             height: calc(100% + 15px);
             top: -15px;

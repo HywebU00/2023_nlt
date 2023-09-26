@@ -9622,11 +9622,11 @@
     width: 800px;
     max-width: 98%;
   }
-  .organization {
-    overflow: hidden;
+  .orgChart {
     font-size: 1rem;
+    overflow: hidden;
   }
-  .organization ul {
+  .orgChart ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -9635,35 +9635,27 @@
     position: relative;
   }
   @media screen and (max-width: 767px) {
-    .organization ul {
+    .orgChart ul {
       display: block;
     }
   }
-  .organization ul li {
+  .orgChart ul li {
     position: relative;
     padding-top: 30px;
   }
   @media screen and (max-width: 767px) {
-    .organization ul li {
+    .orgChart ul li {
       padding-top: 0;
     }
   }
-  .organization ul li:before, .organization ul li:after {
+  .orgChart ul li:before, .orgChart ul li:after {
     box-sizing: border-box;
   }
-  .organization ul li.inner {
-    margin-top: -30px;
-  }
-  @media screen and (max-width: 767px) {
-    .organization ul li.inner {
-      margin-top: 0;
-    }
-  }
-  .organization ul a {
+  .orgChart ul a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5em 0.3em;
+    padding: 0.5em;
     min-height: 60px;
     background-color: #ececec;
     margin: 0 5px 30px;
@@ -9672,31 +9664,31 @@
     color: #333;
     transition: 0.3s;
   }
-  .organization ul a:hover {
+  .orgChart ul a:hover {
     filter: brightness(95%);
   }
   @media screen and (max-width: 767px) {
-    .organization ul a {
+    .orgChart ul a {
       margin-bottom: 15px;
     }
   }
-  .organization .administration > li > a,
-  .organization .director > li > a {
+  .orgChart .administration > li > a,
+  .orgChart .director > li > a {
     width: 30%;
     margin: 0 auto 30px;
     background-color: #74babd;
   }
   @media screen and (max-width: 767px) {
-    .organization .administration > li > a,
-    .organization .director > li > a {
+    .orgChart .administration > li > a,
+    .orgChart .director > li > a {
       width: 100%;
       margin-bottom: 15px;
     }
   }
-  .organization .administration > li > a {
+  .orgChart .administration > li > a {
     position: relative;
   }
-  .organization .administration > li > a:before {
+  .orgChart .administration > li > a:before {
     content: "";
     position: absolute;
     left: calc(50% - 1px);
@@ -9706,15 +9698,15 @@
     background-color: #8ec6c9;
   }
   @media screen and (max-width: 767px) {
-    .organization .administration > li > a:before {
+    .orgChart .administration > li > a:before {
       left: 15px;
     }
   }
   @media screen and (max-width: 767px) {
-    .organization .director ul {
+    .orgChart .director ul {
       padding-left: 30px;
     }
-    .organization .director ul li:before {
+    .orgChart .director ul li:before {
       content: "";
       position: absolute;
       left: -15px;
@@ -9723,14 +9715,14 @@
       height: calc(100% + 15px);
       background-color: #8ec6c9;
     }
-    .organization .director ul li:last-of-type:before {
+    .orgChart .director ul li:last-of-type:before {
       content: "";
       height: calc(50% + 15px);
     }
-    .organization .director ul li a {
+    .orgChart .director ul li a {
       position: relative;
     }
-    .organization .director ul li a:before {
+    .orgChart .director ul li a:before {
       content: "";
       position: absolute;
       top: calc(-50% - 30px);
@@ -9741,18 +9733,18 @@
       box-sizing: border-box;
     }
   }
-  .organization .director > li {
+  .orgChart .director > li {
     margin-top: -30px;
   }
   @media screen and (max-width: 767px) {
-    .organization .director > li {
+    .orgChart .director > li {
       margin-top: 0;
     }
   }
-  .organization .director > li > a {
+  .orgChart .director > li > a {
     position: relative;
   }
-  .organization .director > li > a:before {
+  .orgChart .director > li > a:before {
     content: "";
     position: absolute;
     left: calc(50% - 1px);
@@ -9762,15 +9754,15 @@
     background-color: #8ec6c9;
   }
   @media screen and (max-width: 767px) {
-    .organization .director > li > a:before {
+    .orgChart .director > li > a:before {
       content: none;
     }
   }
-  .organization .subdirector {
+  .orgChart .subdirector {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-  .organization .subdirector:before {
+  .orgChart .subdirector:before {
     content: "";
     position: absolute;
     top: 0;
@@ -9780,15 +9772,15 @@
     background-color: #8ec6c9;
   }
   @media screen and (max-width: 767px) {
-    .organization .subdirector:before {
+    .orgChart .subdirector:before {
       content: none;
     }
   }
-  .organization .subdirector > li {
+  .orgChart .subdirector > li {
     flex-shrink: 1;
     flex-basis: calc(25% - 15px);
   }
-  .organization .subdirector > li:before {
+  .orgChart .subdirector > li:before {
     content: "";
     position: absolute;
     top: 0;
@@ -9798,42 +9790,42 @@
     background-color: #8ec6c9;
   }
   @media screen and (min-width: 768px) {
-    .organization .subdirector > li:nth-of-type(4n + 1):before {
+    .orgChart .subdirector > li:nth-of-type(4n + 1):before {
       width: 50%;
       left: 50%;
     }
-    .organization .subdirector > li:nth-of-type(4n + 1):last-of-type:before {
+    .orgChart .subdirector > li:nth-of-type(4n + 1):last-of-type:before {
       width: calc(150% + 30px);
     }
-    .organization .subdirector > li:nth-of-type(4n + 2) {
+    .orgChart .subdirector > li:nth-of-type(4n + 2) {
       margin-right: 30px;
     }
-    .organization .subdirector > li:nth-of-type(4n + 2):before {
+    .orgChart .subdirector > li:nth-of-type(4n + 2):before {
       width: calc(100% + 30px);
     }
-    .organization .subdirector > li:nth-of-type(4n + 3) {
+    .orgChart .subdirector > li:nth-of-type(4n + 3) {
       margin-left: 30px;
     }
-    .organization .subdirector > li:nth-of-type(4n + 3):before {
+    .orgChart .subdirector > li:nth-of-type(4n + 3):before {
       width: calc(100% + 30px);
       left: -30px;
     }
-    .organization .subdirector > li:nth-of-type(4n + 3):last-of-type:before {
+    .orgChart .subdirector > li:nth-of-type(4n + 3):last-of-type:before {
       width: calc(50% + 30px);
     }
-    .organization .subdirector > li:nth-of-type(4n):before {
+    .orgChart .subdirector > li:nth-of-type(4n):before {
       width: 50%;
     }
   }
   @media screen and (max-width: 767px) {
-    .organization .subdirector > li:last-of-type:before {
+    .orgChart .subdirector > li:last-of-type:before {
       height: calc(100% + 15px) !important;
     }
   }
-  .organization .subdirector > li > a {
+  .orgChart .subdirector > li > a {
     position: relative;
   }
-  .organization .subdirector > li > a:before {
+  .orgChart .subdirector > li > a:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -9843,33 +9835,35 @@
     border-right: 3px dotted #8ec6c9;
   }
   @media screen and (max-width: 767px) {
-    .organization .subdirector > li > a:before {
+    .orgChart .subdirector > li > a:before {
       border-right: none;
       border-bottom: 3px dotted #8ec6c9 !important;
     }
   }
-  .organization .subdirector > li a {
+  .orgChart .subdirector > li a {
     background-color: #ffbd59;
   }
-  .organization .subdirector > li .inner {
-    width: 100%;
+  .orgChart .subdirector > li .inner {
+    margin-top: -30px;
   }
-  .organization .subdirector > li .inner:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: calc(50% - 1px);
-    width: 1px;
-    height: 30px;
-    border-left: 3px dotted #8ec6c9;
+  @media screen and (max-width: 767px) {
+    .orgChart .subdirector > li .inner {
+      margin-top: 0;
+    }
   }
-  .organization .department {
+  .orgChart .subdirector > li .inner > li {
+    flex-grow: 1;
+  }
+  .orgChart .subdirector > li .inner > li > a:before {
+    border-bottom-style: dotted;
+  }
+  .orgChart .department {
     position: relative;
   }
-  .organization .department > li {
+  .orgChart .department > li {
     flex: 1 1 10%;
   }
-  .organization .department > li:before {
+  .orgChart .department > li:before {
     content: "";
     position: absolute;
     top: 0;
@@ -9879,18 +9873,18 @@
     background-color: #8ec6c9;
   }
   @media screen and (min-width: 768px) {
-    .organization .department > li:first-of-type:before, .organization .department > li:last-of-type:before {
+    .orgChart .department > li:first-of-type:before, .orgChart .department > li:last-of-type:before {
       width: 50%;
     }
-    .organization .department > li:first-of-type::before {
+    .orgChart .department > li:first-of-type::before {
       left: auto;
       right: 0;
     }
   }
-  .organization .department > li > a {
+  .orgChart .department > li > a {
     position: relative;
   }
-  .organization .department > li > a:before {
+  .orgChart .department > li > a:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -9899,59 +9893,68 @@
     width: 50%;
     border-left: 3px solid #8ec6c9;
   }
-  .organization .department > li > a {
+  .orgChart .department > li > a {
     background-color: #73abe3;
   }
-  .organization .department li.mission > a:before {
+  .orgChart .department li.mission > a:before {
     border-left: 3px dotted #8ec6c9;
   }
-  .organization .department li.mission a {
+  .orgChart .department li.mission a {
     background-color: #b3d1f0;
   }
   @media screen and (max-width: 767px) {
-    .organization .department li.mission a:before {
+    .orgChart .department li.mission a:before {
       border-bottom-style: dotted;
       border-left: 0;
     }
   }
-  .organization .section {
+  .orgChart .section {
     flex-direction: column;
   }
-  .organization .section:last-of-type {
+  .orgChart .section:last-of-type {
     float: left;
     width: 100%;
   }
-  .organization .section > li {
+  .orgChart .section > li {
     padding: 0 0 0 25px;
     position: relative;
     margin-bottom: 10px;
   }
   @media screen and (max-width: 767px) {
-    .organization .section > li {
+    .orgChart .section > li {
       padding: 0;
     }
   }
-  .organization .section > li:before {
+  .orgChart .section > li:before {
     content: "";
     position: absolute;
     left: 10px;
-    top: calc(-50% - 10px);
+    top: -10px;
     width: 15px;
     height: calc(100% + 10px);
     border-left: 3px solid #8ec6c9;
     border-bottom: 3px dotted #8ec6c9;
   }
-  .organization .section > li:first-of-type:before {
-    height: calc(50% + 30px);
+  .orgChart .section > li:first-of-type:before {
+    height: calc(100% + 30px);
     top: -30px;
   }
   @media screen and (max-width: 767px) {
-    .organization .section > li:first-of-type:before {
+    .orgChart .section > li:first-of-type:before {
       height: calc(100% + 15px);
       top: -15px;
     }
   }
-  .organization .section > li > a {
+  .orgChart .section > li:last-of-type:before {
+    height: calc(50% + 10px);
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .section > li:last-of-type:before {
+      height: calc(100% + 15px);
+      top: -15px;
+    }
+  }
+  .orgChart .section > li > a {
     min-height: 76px;
     margin-bottom: 0;
     background-color: #b3d1f0;
