@@ -434,7 +434,7 @@ $lineWidth: 3px;
         }
       }
 
-      > a {
+      a {
         position: relative;
         //垂直連接線
         &:before {
@@ -461,11 +461,13 @@ $lineWidth: 3px;
         }
         > li {
           flex-grow: 1;
-          > a {
-            &:before {
-              border-bottom-style: dotted;
-            }
-          }
+          // > a {
+          //   position: relative;
+          //   &:before {
+          //     content: '';
+          //     border-bottom-style: dotted;
+          //   }
+          // }
         }
       }
     }

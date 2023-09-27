@@ -9828,10 +9828,10 @@
       height: calc(100% + 15px) !important;
     }
   }
-  .orgChart .subdirector > li > a {
+  .orgChart .subdirector > li a {
     position: relative;
   }
-  .orgChart .subdirector > li > a:before {
+  .orgChart .subdirector > li a:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -9841,7 +9841,7 @@
     border-right: 3px dotted #8ec6c9;
   }
   @media screen and (max-width: 767px) {
-    .orgChart .subdirector > li > a:before {
+    .orgChart .subdirector > li a:before {
       border-right: none;
       border-bottom: 3px dotted #8ec6c9 !important;
     }
@@ -9859,9 +9859,6 @@
   }
   .orgChart .subdirector > li .inner > li {
     flex-grow: 1;
-  }
-  .orgChart .subdirector > li .inner > li > a:before {
-    border-bottom-style: dotted;
   }
   .orgChart .department {
     position: relative;
