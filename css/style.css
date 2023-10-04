@@ -4152,7 +4152,7 @@
   .mainMenu.sticky > ul {
     width: 100%;
     max-width: 1440px;
-    padding: 0 15px;
+    padding: 0 120px;
     margin: 0 auto;
   }
   @media screen and (max-width: 1180px) {
@@ -4271,8 +4271,8 @@
     right: 100%;
   }
   .megaMenu.sticky > ul > li.active > ul {
-    width: calc(100% - 30px);
-    left: 15px;
+    width: calc(100% - 240px);
+    left: 120px;
   }
   .megaMenu > ul {
     position: relative;
