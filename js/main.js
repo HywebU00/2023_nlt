@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------
 
 const windowWidthSmall = 768;
+const windowWidthMedium = 1180;
 const _webHtml = document.documentElement;
 _webHtml.classList.remove('no-js');
 
@@ -305,11 +306,11 @@ function menu() {
   function mobileSearchFunction() {
     let windowWidth = body.outerWidth;
     const search = document.querySelector('.webSearch');
-    if (search !== null && windowWidth < windowWidthSmall) {
+    if (search !== null && windowWidth < windowWidthMedium) {
       search.removeAttribute('style');
       search.classList.add('mobileSearch');
       search.classList.remove('desktopSearch');
-    } else if (search !== null && windowWidth > windowWidthSmall) {
+    } else if (search !== null && windowWidth > windowWidthMedium) {
       search.removeAttribute('style');
       search.classList.remove('mobileSearch');
       search.classList.add('desktopSearch');
@@ -396,7 +397,7 @@ function searchTypeB() {
       windowWidth = window.outerWidth;
       webSearch.removeAttribute('style');
       const observer = new ResizeObserver(function (entries) {
-        if (entries[0].contentRect.width <= windowWidthSmall) {
+        if (entries[0].contentRect.width <= windowWidthMedium) {
           !webSearchBtn.classList.contains('active') && webSearchBtn.classList.add('active');
           !webSearch.classList.contains('mobile') && webSearch.classList.add('mobile');
           let webSearchTop = document.querySelector('header').offsetHeight;
@@ -607,7 +608,7 @@ function mainMenuSetup() {
   let resizeTimeout;
   // --- 切換 PC/Mobile 選單
   function switchMenu() {
-    if (windowWidth > windowWidthSmall && !checkWindow) {
+    if (windowWidth > windowWidthMedium && !checkWindow) {
       let language = document.querySelector('.language ul');
       hideSidebar();
       body.classList.remove('noscroll');
@@ -622,7 +623,7 @@ function mainMenuSetup() {
       });
 
       checkWindow = true;
-    } else if (windowWidth <= windowWidthSmall && checkWindow) {
+    } else if (windowWidth <= windowWidthMedium && checkWindow) {
       body.classList.remove('largeSize', 'medium_size');
 
       menuLiHasChild.forEach((i) => {
@@ -711,7 +712,7 @@ function navSticky() {
     offsetTop = Math.floor(mainMenuTop) || null;
     // --- 如果 offsetTop 不等於 null 則運行下方函式
     if (offsetTop != null) {
-      if (windowWidth >= windowWidthSmall && window.scrollY > offsetTop) {
+      if (windowWidth >= windowWidthMedium && window.scrollY > offsetTop) {
         mainMenu.classList.add('sticky');
         main.style = `padding-top: ${menuHeight}px`;
       } else {
@@ -1914,11 +1915,11 @@ if (navBarElement) {
     const navBar = document.querySelector('.navBar');
     const news = document.querySelector('.news');
 
-    if (windowWidth <= 991) {
-      // 當窗口寬度小於等於767px時，將A移到B的後面
+    if (windowWidth <= windowWidthMedium) {
+      // 當窗口寬度小於等於1180px時，將A移到B的後面
       news.parentNode.insertBefore(navBar, news.nextSibling);
     } else {
-      // 當窗口寬度大於767px時，將A移到B的前面
+      // 當窗口寬度大於1180px時，將A移到B的前面
       news.parentNode.insertBefore(navBar, news);
     }
   }

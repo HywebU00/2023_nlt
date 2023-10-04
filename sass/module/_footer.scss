@@ -6,7 +6,7 @@ footer {
   background-color: $colorPrimary;
   .container {
     justify-content: space-between;
-    @include gutter;
+    //@include gutter;
     & > div {
       padding-bottom: 1em;
     }

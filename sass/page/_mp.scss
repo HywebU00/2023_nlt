@@ -6,7 +6,7 @@
   @media screen and (min-width: 1400px) {
     right: 20px;
   }
-  @include screen('tablet') {
+  @media screen and (max-width: 1180px) {
     position: relative;
     right: auto;
     bottom: auto;
@@ -17,7 +17,7 @@
     background: rgba($colorLight, 0.7);
     padding: 1.5em 0.5em;
     border-radius: 30px;
-    @include screen('tablet') {
+    @media screen and (max-width: 1180px) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -30,7 +30,7 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-    @include screen('tablet') {
+    @media screen and (max-width: 1180px) {
       flex-basis: 120px;
       padding: 0 0.5em;
     }
@@ -41,7 +41,7 @@
       color: $colorWord;
       font-size: 0.875rem;
       text-align: center;
-      @include screen('tablet') {
+      @media screen and (max-width: 1180px) {
         font-size: 1rem;
       }
       &:hover {
@@ -52,7 +52,7 @@
       img {
         transition: 0.2s all;
         width: 28px;
-        @include screen('tablet') {
+        @media screen and (max-width: 1180px) {
           width: 40px;
           margin-bottom: 5px;
         }
@@ -210,7 +210,7 @@
     @media screen and (max-width: 1260px) {
       width: calc(100% - 350px);
     }
-    @include screen('mobile') {
+    @media screen and (max-width: 1180px) {
       width: 100%;
       background: #fff url(../images/paperbg01.png) repeat;
       border-radius: 0;
@@ -225,6 +225,9 @@
 .calendar {
   flex-basis: 320px;
   padding-top: 6rem;
+  @media screen and (max-width: 1180px) {
+    padding-top: 2em;
+  }
   @include screen('mobile') {
     display: none;
   }
@@ -344,8 +347,8 @@
   max-width: calc(100% - 350px);
   padding: 6rem 1rem 8rem 4rem;
   //border-radius: 60px;
-  @include screen('tablet') {
-    padding: 6rem 1rem 8rem;
+  @media screen and (max-width: 1180px) {
+    padding: 2rem 1rem 2rem;
   }
   @include screen('mobile') {
     flex-basis: 100%;

@@ -64,6 +64,12 @@
   font-size: 0.938em;
   margin: 1em 0.5em;
   box-sizing: border-box;
+  // @media screen and (max-width: 1460px) {
+  //   padding: 0 100px;
+  // }
+  @include screen('tablet') {
+    padding: 0;
+  }
   .content {
     display: flex;
     justify-content: flex-end;

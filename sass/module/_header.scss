@@ -17,8 +17,11 @@
   box-shadow: none;
   box-sizing: border-box;
   z-index: 100;
-  @include screen('mobile') {
+
+  @media screen and (max-width: 1180px) {
     display: block;
+  }
+  @include screen('tablet') {
   }
 }
 
@@ -90,7 +93,7 @@
   z-index: 99;
   transition: 0.3s ease-out;
   //box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  @include screen('mobile') {
+  @media screen and (max-width: 1180px) {
     position: fixed;
     width: 100%;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
@@ -106,7 +109,7 @@
     //box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     pointer-events: none;
     z-index: -1;
-    @include screen('mobile') {
+    @media screen and (max-width: 1180px) {
       height: 60px;
     }
   }
@@ -114,7 +117,7 @@
     max-width: $containerMax;
     overflow: visible;
     position: relative;
-    @include screen('mobile') {
+    @media screen and (max-width: 1180px) {
       padding: 0;
     }
   }
@@ -125,8 +128,8 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    margin: -30px 0 20px 0;
-    @include screen('tablet') {
+    margin: -20px 0 20px 0;
+    @media screen and (max-width: 1180px) {
       margin-top: 0;
     }
     a {
@@ -137,7 +140,7 @@
       max-width: 370px;
       max-height: 75px;
     }
-    @include screen('mobile') {
+    @media screen and (max-width: 1180px) {
       padding: 2px 60px;
       margin: 0;
       width: 100%;
@@ -159,12 +162,14 @@
     position: relative;
     z-index: 55;
     align-items: center;
-    @include screen('tablet') {
+
+    @media screen and (max-width: 1180px) {
       flex-wrap: wrap;
       justify-content: flex-end;
+      padding: 0;
+      display: none;
     }
     @include screen('mobile') {
-      display: none;
     }
     .navList {
       flex: 1 1 auto;
