@@ -199,7 +199,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - (100% - $containerMax) / 2 - 365px);
+    width: calc(100% - (100% - 1200px) / 2 - 365px);
     height: 100%;
     border-radius: 60px;
     background-color: #fff;
@@ -207,8 +207,8 @@
     background-repeat: no-repeat, no-repeat, repeat;
     background-position: left top, left bottom, center;
     background-size: 1760px, 1760px, auto;
-    @media screen and (max-width: 1260px) {
-      width: calc(100% - 350px);
+    @media screen and (max-width: 1440px) {
+      width: calc(100% - 470px);
     }
     @media screen and (max-width: 1180px) {
       width: 100%;

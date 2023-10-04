@@ -8436,7 +8436,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - (100% - 1440px) / 2 - 365px);
+    width: calc(100% - (100% - 1200px) / 2 - 365px);
     height: 100%;
     border-radius: 60px;
     background-color: #fff;
@@ -8445,9 +8445,9 @@
     background-position: left top, left bottom, center;
     background-size: 1760px, 1760px, auto;
   }
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1440px) {
     .infoGrp::before {
-      width: calc(100% - 350px);
+      width: calc(100% - 470px);
     }
   }
   @media screen and (max-width: 1180px) {
