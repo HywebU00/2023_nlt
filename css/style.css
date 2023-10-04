@@ -3718,6 +3718,12 @@
       right: 45px;
     }
   }
+  @media screen and (max-width: 1180px) {
+    .scrollToTop {
+      right: 15px;
+      bottom: 20px;
+    }
+  }
   [tooltip] {
     position: relative;
   }
