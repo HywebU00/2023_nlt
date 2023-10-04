@@ -115,8 +115,12 @@
   }
   & > .container {
     max-width: $containerMax;
+    padding: 0 15px;
     overflow: visible;
     position: relative;
+    @media screen and (max-width: 1660px) {
+      padding: 0 120px;
+    }
     @media screen and (max-width: 1180px) {
       padding: 0;
     }
