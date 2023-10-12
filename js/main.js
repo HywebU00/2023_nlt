@@ -353,7 +353,7 @@ function topNav() {
 
   languageSelect !== null ? languageSelectInit() : '';
 }
-// topNav();
+//topNav();
 
 // -----------------------------------------------------------------------
 // ----- websearch設定 ------------------------------------------------
@@ -1039,7 +1039,7 @@ class SelectSlider {
   sliderClick() {
     this.name.forEach((i) => {
       i.addEventListener('click', (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         const sliderItem = e.target.nextElementSibling;
         if (sliderItem === null) {
           return;
