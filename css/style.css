@@ -9362,6 +9362,7 @@
     outline: #d30000 2px dashed;
   }
   .feedback {
+    clear: both;
     padding: 1em 1.5em;
     background-color: rgba(255, 172, 47, 0.4);
     border-radius: 20px;
