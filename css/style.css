@@ -6854,6 +6854,9 @@
   .navigation .share ul li a:focus-visible img {
     filter: grayscale(1);
   }
+  .marquee {
+    clear: both;
+  }
   .marquee .swiperBox {
     margin: 0;
     list-style: none;
@@ -6898,7 +6901,7 @@
   }
   .marquee .swiperBox .marquee-arrow.nextSlider {
     bottom: 0;
-    left: 4px;
+    left: 5px;
   }
   .marquee .swiperBox .marquee-arrow.nextSlider::before {
     transform: rotate(180deg);
@@ -8080,6 +8083,7 @@
   }
   .cpSlider {
     padding: 1em 0;
+    clear: both;
   }
   .swiperBox {
     position: relative;
@@ -8896,6 +8900,7 @@
     background: #f1f1f1;
     overflow: hidden;
     padding: 0.5em 0.5em 0.2em;
+    clear: both;
   }
   .cp .picfull img {
     width: 100%;
@@ -9015,6 +9020,7 @@
   .fileDownload {
     width: 100%;
     margin: 0 auto 2em;
+    clear: both;
     clear: both;
     zoom: 1;
   }
@@ -9318,6 +9324,7 @@
   }
   .webLink {
     margin: 1em 0;
+    clear: both;
   }
   .webLink h3 {
     font-size: 1.5em;
