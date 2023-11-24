@@ -40,6 +40,9 @@ body {
   @media screen and (max-width: 1180px) {
     padding: 0 30px;
   }
+  @include screen('mobile') {
+    padding: 0 15px;
+  }
 }
 .main {
   position: relative;
