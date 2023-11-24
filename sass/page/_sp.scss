@@ -177,10 +177,17 @@
   .dateSelect {
     font-size: 1.5rem;
     margin-bottom: 1em;
-    .prev,
-    .next {
-      position: relative;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      padding: 0 1em;
     }
+    @media screen and (min-width: 768px) {
+      .prev,
+      .next {
+        position: relative;
+      }
+    }
+
     .dateRange {
       margin: 0 10px;
       & + .dateRange {
@@ -188,6 +195,17 @@
           content: '-';
           display: inline-block;
           margin-right: 20px;
+        }
+        @include screen('mobile') {
+          padding-top: 20px;
+          position: relative;
+          &::before {
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            margin-right: 0;
+            transform: rotate(90deg);
+          }
         }
       }
       span {

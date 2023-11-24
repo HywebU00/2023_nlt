@@ -9657,9 +9657,17 @@ h2.title {
   font-size: 1.5rem;
   margin-bottom: 1em;
 }
-.serviceApply .dateSelect .prev,
-.serviceApply .dateSelect .next {
-  position: relative;
+@media screen and (max-width: 767px) {
+  .serviceApply .dateSelect {
+    flex-wrap: wrap;
+    padding: 0 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .serviceApply .dateSelect .prev,
+  .serviceApply .dateSelect .next {
+    position: relative;
+  }
 }
 .serviceApply .dateSelect .dateRange {
   margin: 0 10px;
@@ -9668,6 +9676,19 @@ h2.title {
   content: "-";
   display: inline-block;
   margin-right: 20px;
+}
+@media screen and (max-width: 767px) {
+  .serviceApply .dateSelect .dateRange + .dateRange {
+    padding-top: 20px;
+    position: relative;
+  }
+  .serviceApply .dateSelect .dateRange + .dateRange::before {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-right: 0;
+    transform: rotate(90deg);
+  }
 }
 .serviceApply .dateSelect .dateRange span {
   color: #d9470b;
