@@ -13,6 +13,12 @@
     color: $colorRed;
   }
 }
+.hideDisabled {
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
 
 // 日曆calendar_Tb
 .calendarTB {
@@ -116,27 +122,31 @@
     margin: 5px 0 0;
     text-align: center;
     .applyPeriod {
-      background: $colorSecondary;
+      background: $colorPrimary;
       padding: 0.5em;
       letter-spacing: 0.5px;
       border-radius: 4px;
       margin-bottom: 5px;
+      color: #fff;
       &.disabled {
-        background-color: $colorLightGray;
+        background-color: #dedede;
+        color: $colorWord;
+        .time {
+          border-bottom: 1px dotted rgba(255, 255, 255, 1);
+        }
       }
       span {
         display: block;
       }
       .time {
-        border-bottom: 1px dotted #fff;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
       }
       .quota {
         font-size: rem(15);
-        color: #555;
         em {
           font-style: normal;
           padding: 0 3px;
-          color: $colorRed;
+          color: $colorYellow;
           font-weight: bold;
         }
       }
@@ -181,7 +191,7 @@
         }
       }
       span {
-        color: $colorRed;
+        color: #d9470b;
         font-family: 'Century Gothic';
       }
     }

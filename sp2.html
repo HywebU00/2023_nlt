@@ -427,7 +427,11 @@
               <button class="next" title="下個月">下個月</button>
             </div>
             <!-- 年月份 end -->
+
             <div class="tableList calendarTB">
+              <div class="hideDisabled">
+                <label><input type="checkbox" class="myCheck" />隱藏已額滿時段</label>
+              </div>
               <table>
                 <thead>
                   <tr>
@@ -650,30 +654,87 @@
                     </div>
                   </div>
                   <div class="formGrp">
-                    <div class="formTitle" aria-required="true">服務時段<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                    <div class="formContent">
-                      <div class="datePick">
-                        <input name="" type="date" value="" placeholder="開始日期" title="開始日期" />
-                      </div>
-                      <div class="datePick">
-                        <input name="" type="date" value="" placeholder="結束日期" title="結束日期" />
+                    <div class="formTitle" aria-required="true">上午時段<em>Morning section</em></div>
+                    <div class="formContent formInline">
+                      <select name="" id="">
+                        <option value="">起始時間</option>
+                        <option value="">09:00</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                      </select>
+                      <select name="" id="">
+                        <option value="">結束時間</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                        <option value="">12:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle" aria-required="true">下午時段<em>Afternoon section</em></div>
+                    <div class="formContent formInline">
+                      <select name="" id="">
+                        <option value="">起始時間</option>
+                        <option value="">14:00</option>
+                        <option value="">15:00</option>
+                        <option value="">16:00</option>
+                        <option value="">17:00</option>
+                      </select>
+                      <select name="" id="">
+                        <option value="">結束時間</option>
+                        <option value="">15:00</option>
+                        <option value="">16:00</option>
+                        <option value="">17:00</option>
+                        <option value="">18:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle" aria-required="true">晚上時段<em>Evening section</em></div>
+                    <div class="formContent formInline">
+                      <select name="" id="">
+                        <option value="">起始時間</option>
+                        <option value="">18:00</option>
+                        <option value="">19:00</option>
+                        <option value="">20:00</option>
+                      </select>
+                      <select name="" id="">
+                        <option value="">結束時間</option>
+                        <option value="">19:00</option>
+                        <option value="">20:00</option>
+                        <option value="">21:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="formGrp" role="group" aria-labelledby="fake-legend">
+                    <label class="formTitle" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>服務地點<em>Service location</em></label>
+                    <div class="formContent" id="fake-legend">
+                      <div class="radioGrp formInline">
+                        <label> <input type="radio" name="sampleRadio" value="" title="視障資料中心 Visual Impairment Information Center" />視障資料中心Visual Impairment Information Center</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="親子資料中心 Parent-Child Information Center" />親子資料中心 Parent-Child Information Center</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="1樓期刊室 1F Current Periodicals and Newspapers" />1樓期刊室 1F Current Periodicals and Newspapers</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="2-3樓閱覽書庫區 2F & 3F Stack Room" />2-3樓閱覽書庫區 2F & 3F Stack Room</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="4-5樓書庫區 4F & 5F Stack Room" />4-5樓書庫區 4F & 5F Stack Room</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="5樓書庫區(電子資源) 5F Stack Room (E-resource)" />5樓書庫區(電子資源) 5F Stack Room (E-resource)</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="5樓臺灣圖書醫院 5F Taiwan Book Hospital" />5樓臺灣圖書醫院 5F Taiwan Book Hospital</label>
+                        <label> <input type="radio" name="sampleRadio" value="" title="6樓臺灣學研究中心 6F Taiwan Study Research Center" />6樓臺灣學研究中心 6F Taiwan Study Research Center</label>
                       </div>
                     </div>
                   </div>
                   <div class="formGrp">
-                    <label for="username" class="formTitle" aria-required="true">姓名<br />Name<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <label for="username" class="formTitle" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名<em>Name</em></label>
                     <div class="formContent">
                       <input type="text" id="username" value="" title="請輸入姓名" />
                     </div>
                   </div>
                   <div class="formGrp">
-                    <label for="phone" class="formTitle" aria-required="true">聯絡電話<br />Phone Number<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <label for="phone" class="formTitle" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡電話<em>Phone Number</em></label>
                     <div class="formContent">
                       <input name="phone" id="phone" type="tel" title="請輸入電話" />
                     </div>
                   </div>
                   <div class="formGrp">
-                    <label for="email" class="formTitle" aria-required="true">電子郵件 Email<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <label for="email" class="formTitle" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>電子郵件 <em>Email</em></label>
                     <div class="formContent">
                       <input name="email" type="email" id="email" title="請輸入E-mail" />
                       <div class="notice">這是一般提醒訊息區塊</div>
@@ -684,23 +745,23 @@
                     </div>
                   </div>
                   <div class="formGrp" role="group" aria-labelledby="fake-legend">
-                    <div for="" class="formTitle" aria-required="true">身分別<br />Status Identification<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                    <div for="" class="formTitle" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>身分別<em>Status Identification</em></div>
                     <div class="formContent" id="fake-legend">
                       <div class="radioGrp formInline">
-                        <label> <input type="radio" name="sampleRadio5" value="" checked="" />國中 Junior High School</label>
+                        <label> <input type="radio" name="sampleRadio5" value="" ㄊ />國中 Junior High School</label>
                         <label> <input type="radio" name="sampleRadio5" title="臺北市" value="" />高中職 High School</label>
                         <label> <input type="radio" name="sampleRadio5" title="臺中市" value="" />大專院校 College</label>
                       </div>
                     </div>
                   </div>
                   <div class="formGrp">
-                    <label for="" aria-required="true" class="formTitle">備註<br />Remarks </label>
+                    <label for="" aria-required="true" class="formTitle">備註<em>Remarks </em></label>
                     <div class="formContent">
                       <textarea placeholder="請輸入備註" id="" name="" rows="8" cols="40" title="請輸入備註"></textarea>
                     </div>
                   </div>
                   <div class="formGrp">
-                    <div class="formTitle">驗證碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
+                    <div class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗證碼</div>
                     <div class="formContent formInline"></div>
                   </div>
                   <div class="btnGrp formInline">

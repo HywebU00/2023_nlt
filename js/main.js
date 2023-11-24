@@ -445,6 +445,7 @@ function searchTypeB() {
     // });
     // document.addEventListener('click', clickOtherPlace);
   }
+  menuOverlay.addEventListener('click', (e) => slider.jsSlideUp(webSearch, 200));
 }
 
 function mobileSearch(obj) {

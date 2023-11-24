@@ -66,8 +66,9 @@ window.addEventListener('load', () => {
     mpSliderPagination.push(item.dataset.title);
   });
   const mpSlider = new Swiper('.mpSlider .swiper', {
-    // centeredSlides: true,
+    centeredSlides: true,
     // spaceBetween: 30,
+    slidesPerView: 1,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -86,6 +87,11 @@ window.addEventListener('load', () => {
       nextEl: '.mpSlider .nextSlider', //自行設定樣式
       prevEl: '.mpSlider .prevSlider', //自行設定樣式
       disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    },
+    breakpoints: {
+      1400: {
+        slidesPerView: 'auto',
+      },
     },
   });
 
@@ -257,4 +263,16 @@ window.addEventListener('load', () => {
       swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
     },
   });
+  const calendarTB = document.querySelector('.calendarTB');
+
+  if (calendarTB) {
+    const checkboxHide = calendarTB.querySelector('.hideDisabled input[type="checkbox"]');
+    const disabledElements = document.querySelectorAll('.disabled');
+    checkboxHide.addEventListener('change', function () {
+      const displayValue = checkboxHide.checked ? 'none' : 'block';
+      disabledElements.forEach(function (element) {
+        element.style.display = displayValue;
+      });
+    });
+  }
 })();

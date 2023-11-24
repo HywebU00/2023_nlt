@@ -13,8 +13,8 @@
   // border-radius: $btnRadius;
   // @include gradient(lighten($btnBg, 5), darken($btnBg, 15), vertical);
   &:hover {
-    background: darken($btnBg, 10); // Old browsers
-    border: 1px solid darken($btnBg, 20);
+    background: darken($btnBg, 8); // Old browsers
+    border: 1px solid darken($btnBg, 8);
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -22,7 +22,7 @@
   }
   &:focus-visible {
     background: darken($btnBg, 10); // Old browsers
-    border: 1px solid darken($btnBg, 20);
+    border: 1px solid darken($btnBg, 10);
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -108,14 +108,14 @@
 }
 // 主要按鈕
 .btnPrimary {
-  background: $colorPrimary;
+  background: darken($colorPrimary, 8);
   color: #fff;
-  border: solid 1px $colorPrimary;
+  border: solid 1px darken($colorPrimary, 8);
 
   &:hover,
   &:focus-visible {
-    background: darken($colorPrimary, 10);
-    border: solid 1px $colorPrimary;
+    background: darken($colorPrimary, 12);
+    border: solid 1px darken($colorPrimary, 12);
     color: #fff;
   }
 }
