@@ -30,19 +30,11 @@
       }
 
       .wrapper h1 {
-        font-size: 10em;
+        font-size: 3.2em;
         display: block;
-        float: left;
-        width: 50%;
-        text-align: right;
-        margin: 0 30px 15px 0;
+        margin: 30px 0;
         font-family: sans-serif;
-      }
-
-      .wrapper h2 {
-        overflow: hidden;
-        font-size: 2em;
-        padding-top: 2em;
+        text-align: center;
       }
 
       .wrapper .error {
@@ -50,11 +42,11 @@
         text-align: center;
       }
 
-      .wrapper .error h3 {
+      .wrapper .error p {
         margin-bottom: 1em;
       }
 
-      .wrapper .error h3 small {
+      .wrapper .error p small {
         display: block;
       }
 
@@ -86,19 +78,10 @@
 
       @media screen and (max-width: 767px) {
         .wrapper h1 {
-          float: none;
           margin: 10px 0 5px;
-          line-height: 1;
           text-align: center;
           width: 100%;
-          font-size: 8em;
-        }
-
-        .wrapper h2 {
-          clear: both;
-          text-align: center;
-          margin: 0;
-          padding: 0;
+          font-size: 2.6em;
         }
 
         .wrapper .error {
@@ -110,13 +93,12 @@
 
   <body>
     <div class="wrapper">
-      <h1>404</h1>
-      <h2>抱歉！<br />找不到您的頁面！</h2>
+      <h1>網站維護中，請稍候</h1>
       <div class="error">
-        <h3>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small></h3>
-        <h3>
+        <p>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small></p>
+        <p>
           將在<span>2</span>秒後自動跳轉到首頁 <small>be redirected to homepage automatically in <span>2</span> seconds.</small>
-        </h3>
+        </p>
       </div>
       <div class="btnGrp">
         <a href="javascript:history.back()" class="btn">回上一頁</a>

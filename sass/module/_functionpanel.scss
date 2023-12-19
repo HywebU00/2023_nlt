@@ -193,12 +193,13 @@
 }
 
 // share 基本樣式   ------------------------
-.share {
+.shareBlock {
   box-sizing: border-box;
   margin: 0.5em 0;
   ul {
     @include liReset;
     display: flex;
+    justify-content: flex-end;
     li {
       margin: 0px 3px 3px;
       flex: 0 0 32px;

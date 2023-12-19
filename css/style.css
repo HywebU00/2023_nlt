@@ -6434,37 +6434,30 @@
     }
   }
   .submenu li a {
-    border: 1px solid #ddd;
-    padding: 1em 1em 1em 2.5em;
+    padding: 1em 1em 1em 3em;
     display: block;
     vertical-align: top;
     position: relative;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  .submenu li a:hover, .submenu li a:focus-visible {
+    border-radius: 2em;
+    background-color: #fff;
+    transition: 0.2s;
     color: #02676c;
-    cursor: pointer;
-  }
-  .submenu li a:focus-visible {
-    outline: #d30000 2px dashed;
   }
   .submenu li a .num {
     position: absolute;
     width: 1em;
     top: 1em;
-    left: 0.5em;
+    left: 1.25em;
     text-align: right;
   }
   .submenu li a .num:after {
     content: ".";
   }
   .submenu li a:hover, .submenu li a:focus-visible {
-    border: 1px solid #02676c;
-    color: #02676c;
+    background-color: #02676c;
+    color: #fff;
   }
   .tabSet {
     margin: 20px auto;
@@ -6744,32 +6737,33 @@
     background: url(../images/basic/icon_forward_dark.svg) no-repeat center center;
     background-size: 100%;
   }
-  .share {
+  .shareBlock {
     box-sizing: border-box;
     margin: 0.5em 0;
   }
-  .share ul {
+  .shareBlock ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
+    justify-content: flex-end;
   }
-  .share ul li {
+  .shareBlock ul li {
     margin: 0px 3px 3px;
     flex: 0 0 32px;
   }
-  .share ul li a {
+  .shareBlock ul li a {
     display: block;
     height: 32px;
   }
   @media screen and (max-width: 991px) {
-    .share ul li {
+    .shareBlock ul li {
       margin: 0px 1px 2px;
       width: 32px;
       height: 32px;
     }
   }
-  .share ul li img {
+  .shareBlock ul li img {
     width: 100%;
     height: 100%;
   }
@@ -7482,7 +7476,8 @@
   }
   .main {
     position: relative;
-    margin: 0 auto 5em;
+    margin: 0 auto;
+    padding-bottom: 5em;
   }
   @media screen and (max-width: 1180px) {
     .main {
@@ -7515,42 +7510,11 @@
     background: url(../images/booktop01.svg) no-repeat center bottom;
     background-size: 100%;
   }
+  .innerPage.np {
+    background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.6) 95%, rgba(227, 243, 132, 0.3) 100%);
+  }
   .innerPage > .container {
     padding-top: 1em;
-  }
-  .innerPage .centerBlock {
-    flex: none;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-  .innerPage .leftBlock {
-    flex: none;
-    flex-basis: 260px;
-    max-width: 260px;
-    margin-right: 40px;
-    align-self: flex-start;
-    position: sticky;
-    top: 50px;
-  }
-  .innerPage .leftBlock.hidden + .centerBlock {
-    flex: none;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-  .innerPage .leftBlock + .centerBlock {
-    flex: auto;
-    flex-basis: calc(100% - 300px);
-    max-width: calc(100% - 300px);
-  }
-  @media screen and (max-width: 991px) {
-    .innerPage .leftBlock {
-      display: none;
-    }
-    .innerPage .leftBlock + .centerBlock {
-      flex: none;
-      flex-basis: 100%;
-      max-width: 100%;
-    }
   }
   .orderPanel {
     display: flex;
@@ -8346,20 +8310,10 @@ br {
 }
 
 .news {
-  background: linear-gradient(180deg, rgba(243, 241, 132, 0.8) 0%, rgba(234, 242, 132, 0.91) 15%, #e3f384 103%, rgba(227, 243, 132, 0) 113%);
-  padding: 1rem 0;
+  background: linear-gradient(180deg, rgba(243, 241, 132, 0.25) 0%, rgba(234, 242, 132, 0.91) 14%, #e3f384 103%, rgba(227, 243, 132, 0) 113%);
+  padding: 4em 0 1em 0;
   position: relative;
   z-index: 10;
-}
-.news::before {
-  content: "";
-  position: absolute;
-  bottom: calc(100% - 2px);
-  left: 0;
-  width: 100%;
-  height: 106px;
-  background: url(../images/booktop01.svg) no-repeat center bottom;
-  background-size: 100%;
 }
 .news .tabSet .tabItems button {
   font-size: 1.5rem;
@@ -8722,6 +8676,8 @@ br {
   background-color: #038187;
   border-radius: 50%;
   color: #fff;
+  text-align: center;
+  font-size: 1.125em;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: 0.3s;
@@ -8733,8 +8689,8 @@ br {
 .social li.fb a {
   background-color: #415a9d;
 }
-.social li.fbChungshan a {
-  background: #415a9d url(../images/chungshan.png) center no-repeat;
+.social li.fbTSRC a {
+  background: url(../images/tsrc.jpg) center no-repeat;
 }
 .social li.youtube a {
   background-color: #ac312e;
@@ -8742,8 +8698,8 @@ br {
 .social li.podcast a {
   background-color: #9c4fd1;
 }
-.social li.soundon a {
-  background-color: #007db4;
+.social li.ntlPodcast a {
+  background-color: #00857b;
 }
 .social li .iconWrap {
   width: 62px;
