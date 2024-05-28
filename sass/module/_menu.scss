@@ -119,6 +119,8 @@
         padding: 1em;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 5px -5px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         // transition: 0.3s $cubic;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
         // 第二層選單樣式
         li {
           a {
@@ -131,6 +133,9 @@
               color: #fff;
               background: $aHover;
             }
+          }
+          ul {
+            border-radius: 40px;
           }
         }
         li.hasChild {

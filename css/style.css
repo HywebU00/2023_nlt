@@ -4230,6 +4230,8 @@
     border-radius: 0 0 40px 40px;
     padding: 1em;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 5px -5px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
   .mainMenu ul li ul li a {
     padding: 0.6em 1.2em;
@@ -4240,6 +4242,9 @@
   .mainMenu ul li ul li a:hover, .mainMenu ul li ul li a:focus-visible {
     color: #fff;
     background: #02676c;
+  }
+  .mainMenu ul li ul li ul {
+    border-radius: 40px;
   }
   .mainMenu ul li ul li.hasChild > ul {
     z-index: 999;
