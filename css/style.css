@@ -4237,14 +4237,15 @@
     padding: 0.6em 1.2em;
     font-weight: bold;
     color: #333;
-    border-radius: 2em;
+    border-radius: 1.5em;
   }
   .mainMenu ul li ul li a:hover, .mainMenu ul li ul li a:focus-visible {
     color: #fff;
     background: #02676c;
   }
   .mainMenu ul li ul li ul {
-    border-radius: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   }
   .mainMenu ul li ul li.hasChild > ul {
     z-index: 999;
@@ -8054,6 +8055,9 @@ br {
   justify-content: center;
   align-items: center;
   margin-top: 1em;
+  position: absolute;
+  bottom: -30px !important;
+  z-index: 10;
 }
 .swiperDots .swiper-pagination-bullet {
   /* 點的顏色 */
@@ -8066,13 +8070,29 @@ br {
 .swiperDots .swiper-pagination-bullet:focus-visible {
   box-shadow: 0px 0px 0px 2px #1c8e93 !important;
 }
+.swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  /* 點 active 的顏色 */
+  background: #02676c;
+}
+.swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active:hover {
+  /* 點 active  hover的顏色 */
+  background: #ff3e4d;
+}
+.swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active:focus-visible {
+  /* 點 active  focus的顏色 */
+  background: #ff3e4d;
+}
+.swiperDots .swiper-pagination-bullet.noFonts {
+  font-size: 0;
+}
 
 .swiperArrow {
   position: absolute;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px 15px;
+  padding: 20px 15px;
   margin: 0;
   border-radius: 0;
   background: rgba(255, 255, 255, 0.5);
@@ -8296,15 +8316,34 @@ br {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.mpSlider .swiperArrow {
-  height: 100%;
+.mpSlider .swiperArrow.prevSlider {
+  left: calc((100% - 1440px) / 2 + 20px);
 }
-@media screen and (min-width: 1440px) {
+.mpSlider .swiperArrow.nextSlider {
+  right: calc((100% - 1440px) / 2 + 20px);
+}
+@media screen and (max-width: 1600px) {
   .mpSlider .swiperArrow.prevSlider {
-    left: calc((100% - 1440px) / 2);
+    left: calc((100% - 1440px) / 2 + 80px);
   }
   .mpSlider .swiperArrow.nextSlider {
-    right: calc((100% - 1440px) / 2);
+    right: calc((100% - 1440px) / 2 + 80px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .mpSlider .swiperArrow.prevSlider {
+    left: 120px;
+  }
+  .mpSlider .swiperArrow.nextSlider {
+    right: 120px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .mpSlider .swiperArrow.prevSlider {
+    left: 0;
+  }
+  .mpSlider .swiperArrow.nextSlider {
+    right: 0;
   }
 }
 .mpSlider img {
@@ -8318,7 +8357,6 @@ br {
   background: linear-gradient(180deg, rgba(243, 241, 132, 0.25) 0%, rgba(234, 242, 132, 0.91) 14%, #e3f384 103%, rgba(227, 243, 132, 0) 113%);
   padding: 4em 0 1em 0;
   position: relative;
-  z-index: 10;
 }
 .news .tabSet .tabItems button {
   font-size: 1.5rem;

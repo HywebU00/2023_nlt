@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
     slidesPerView: 1,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 10000,
     },
     // 切換點
     pagination: {
