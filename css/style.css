@@ -8056,7 +8056,6 @@ br {
   align-items: center;
   margin-top: 1em;
   position: absolute;
-  bottom: -30px !important;
   z-index: 10;
 }
 .swiperDots .swiper-pagination-bullet {
@@ -8345,6 +8344,9 @@ br {
   .mpSlider .swiperArrow.nextSlider {
     right: 0;
   }
+}
+.mpSlider .swiperDots {
+  bottom: -30px !important;
 }
 .mpSlider img {
   width: 100%;
@@ -8743,6 +8745,10 @@ br {
 }
 .social li.ntlPodcast a {
   background-color: #00857b;
+}
+.social li.ner a {
+  background: #038187 url(../images/ner.jpg) center no-repeat;
+  background-size: cover;
 }
 .social li .iconWrap {
   width: 62px;

@@ -116,7 +116,9 @@
       }
     }
   }
-
+  .swiperDots {
+    bottom: -30px !important;
+  }
   img {
     width: 100%;
     aspect-ratio: 5/2;
@@ -523,6 +525,12 @@
     &.ntlPodcast {
       a {
         background-color: #00857b;
+      }
+    }
+    &.ner {
+      a {
+        background: $colorPrimary url(../images/ner.jpg) center no-repeat;
+        background-size: cover;
       }
     }
     // &.soundon {
